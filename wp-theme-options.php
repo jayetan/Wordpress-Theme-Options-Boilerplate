@@ -48,15 +48,13 @@ function boilerplate_styles_scripts() { ?>
 	</style>
 	<script type="text/javascript">
 		jQuery(function($){
-			$(".hndle").click(function(){
+			$(".boilerplate-container .hndle").click(function(){
 				$(this).next().toggle();
 				$(this).parent().toggleClass("open");
 			})
 		})
 	</script>
-<?php } ?>
-
-<?php
+<?php } 
 
 $boilset = 'boilerplate_settings';
 
@@ -123,7 +121,7 @@ function theme_settings_page() {
 						<tr valign="top">
 							<th scope="row"><label for="<?php echo $boilset."[footer_scripts]"; ?>">Footer Scripts</label></th>
 							<td>
-								<p><textarea name="<?php echo $boilset."[footer_scripts]"; ?>" class="large-text" id="<?php echo $boilset."[footer_scripts]"; ?>" cols="78" rows="8"></textarea></p>
+								<p><textarea name="<?php echo $boilset."[footer_scripts]"; ?>" class="large-text" id="<?php echo $boilset."[footer_scripts]"; ?>" cols="78" rows="8"><?php echo $options['footer_scripts']; ?></textarea></p>
 								<p><span class="description">Add Description here.</span></p>
 							</td>
 						</tr>
